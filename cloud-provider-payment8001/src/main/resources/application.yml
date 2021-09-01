@@ -1,0 +1,42 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/cloud?serverTimezone=UTC&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+
+mybatis:
+  type-aliases-package: com.zy.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    aggressive-lazy-loading: true
+    lazy-loading-enabled: true
+  mapper-locations: com/**/*Mapper.xml
+mapper:
+  not-empty: false
+  identity: MYSQL
+  before: false
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+logging:
+  level:
+    root: info
+  file:
+    name: mylog
