@@ -1,0 +1,22 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: cloud-payment-consumer
+
+logging:
+  level:
+    root: info
+  file:
+    name: mylog
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: 127.0.0.1

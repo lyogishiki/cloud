@@ -1,0 +1,10 @@
+server:  
+  port: 20002  
+eureka:  
+  instance:  
+    hostname: peer2  
+  client:  
+    #register-with-eureka: false  
+    #fetch-registry: false  
+    service-url:  
+      defaultZone: http://peer1:20001/eureka/  

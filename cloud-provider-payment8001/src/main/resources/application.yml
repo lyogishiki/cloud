@@ -17,6 +17,7 @@ spring:
       stat-view-servlet:
         allow: true
 
+
 mybatis:
   type-aliases-package: com.zy.entity
   configuration:
@@ -40,3 +41,11 @@ logging:
     root: info
   file:
     name: mylog
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: 127.0.0.1

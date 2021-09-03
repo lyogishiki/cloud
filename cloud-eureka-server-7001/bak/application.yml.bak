@@ -1,0 +1,18 @@
+server:
+  port: 7001
+
+logging:
+  level:
+    root: info
+  file:
+    name: mylog
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    #false 不向注册中心注册自己
+    register-with-eureka: false
+    #false 表示自己就是注册中心,不需要检索服务
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
