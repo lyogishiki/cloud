@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    #active: test
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        extension-configs:
+          -
+            data-id: ext1
+            refresh: true
+          -
+            data-id: ext2
+            refresh: true
+        shared-configs[0]:
+          data-id: share0.yml
+          refresh: true
+        shared-configs[1]:
+          data-id: share1.yml
+          refresh: true
+          #指定group
+        group: DEV_GROUP
+        #命名空间ID
+        namespace: 0d79b91b-ef44-4155-8ae3-d27dba8c6ec7
+
+  application:
+    name: nacos-config-client
+

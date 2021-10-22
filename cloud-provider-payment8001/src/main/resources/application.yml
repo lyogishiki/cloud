@@ -17,7 +17,6 @@ spring:
       stat-view-servlet:
         allow: true
 
-
 mybatis:
   type-aliases-package: com.zy.entity
   configuration:
@@ -49,3 +48,10 @@ eureka:
     register-with-eureka: true
   instance:
     hostname: 127.0.0.1
+    #还是带上主机名成比较好
+    #instance-id: ${spring.application.name}-${server.port}
+    #访问路径显示路径。
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    #超时剔除服务.
+    lease-expiration-duration-in-seconds: 30

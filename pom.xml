@@ -11,6 +11,12 @@
         <module>cloud-provider-payment8001</module>
         <module>cloud-consumer-payment9001</module>
         <module>cloud-eureka-server-7001</module>
+        <module>payment-zookeeper-8004</module>
+        <module>consumer-zookeeper-9004</module>
+        <module>alibaba-consumer-payment-6001</module>
+        <module>alibaba-provider-payment6101</module>
+        <module>alibaba-config-nacos-client</module>
+        <module>alibaba-sentinel-6301</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -36,9 +42,20 @@
         <mysql.version>5.1.47</mysql.version>
         <druid.version>1.2.6</druid.version>
         <mybatis.spring.boot.version>2.1.5</mybatis.spring.boot.version>
+        <spring.boot.version>2.4.2</spring.boot.version>
         <spring-cloud.version>2020.0.1</spring-cloud.version>
+        <spring.cloud.alibaba.version>2021.1</spring.cloud.alibaba.version>
 
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>3.0.0</version>
+            <type>maven-plugin</type>
+        </dependency>
+    </dependencies>
 
     <!--  一般用于父工程,子项目不需要在写版本-->
     <dependencyManagement>
@@ -46,7 +63,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.4.2</version>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -74,7 +91,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2021.1</version>
+                <version>${spring.cloud.alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -97,7 +114,6 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>

@@ -7,14 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="payment-zookeeper-8004" />
+        <module name="alibaba-consumer-payment-6001" />
         <module name="cloud-eureka-server-7001" />
+        <module name="alibaba-provider-payment6101" />
+        <module name="cloud-provider-payment8001" />
+        <module name="alibaba-config-nacos-client" />
+        <module name="alibaba-sentinel-6301" />
         <module name="cloud-consumer-payment9001" />
         <module name="cloud-consumer-payment-9002" />
-        <module name="cloud-provider-payment8001" />
+        <module name="consumer-zookeeper-9004" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="alibaba-consumer-payment6001" target="8" />
+      <module name="cc" target="1.5" />
       <module name="cloud-consumer-payment-9002" target="1.8" />
+      <module name="ddd" target="8" />
+      <module name="untitled" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

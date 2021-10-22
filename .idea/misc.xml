@@ -9,7 +9,12 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/alibaba-consumer-payment6001/pom.xml" />
+        <option value="$PROJECT_DIR$/alibaba-consumer-payment6101/pom.xml" />
+        <option value="$PROJECT_DIR$/cc/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-consumer-payment-9002/pom.xml" />
+        <option value="$PROJECT_DIR$/ddd/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
       </set>
     </option>
   </component>

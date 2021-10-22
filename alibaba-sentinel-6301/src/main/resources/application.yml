@@ -1,0 +1,28 @@
+server:
+  port: 6301
+
+spring:
+  application:
+    name: alibaba-sentinel-6301
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    sentinel:
+      transport:
+        #配置sentinel dashboar的地址
+        dashboard: 127.0.0.1:8088
+        #默认8719端口,假如被占用会自动从8719开始加1找
+        port: 8719
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: info
+  file:
+    name: mylog
